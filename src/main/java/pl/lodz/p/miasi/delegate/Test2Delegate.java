@@ -7,7 +7,7 @@ public class Test2Delegate implements JavaDelegate {
 
     @Override
     public void execute(DelegateExecution delegateExecution) throws Exception {
-        System.out.println("chuj");
+        System.out.println("end ev");
     }
 
 }

@@ -1,8 +1,7 @@
 camunda.bpm:
-  webapp:
-      index-redirect-enabled: true
   admin-user:
     id: admin
     password: admin
+    firstName: Admin
   filter:
     create: All tasks

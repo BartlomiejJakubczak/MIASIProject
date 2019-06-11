@@ -15,7 +15,7 @@ import java.util.Map;
 @Controller
 public class HomeController {
 
-    final RuntimeService runtimeService;
+    private final RuntimeService runtimeService;
 
     @Autowired
     public HomeController(RuntimeService runtimeService) {

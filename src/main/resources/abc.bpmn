@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://bpmn.io/schema/bpmn" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:yaoqiang="http://bpmn.sourceforge.net" exporter="Camunda Modeler" exporterVersion="3.1.0" expressionLanguage="http://www.w3.org/1999/XPath" id="Definitions_1prhkdg" name="" targetNamespace="http://bpmn.io/schema/bpmn" typeLanguage="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
+  <bpmn:process id="abc" isClosed="false" isExecutable="true" name="Abc" processType="None">
+    <bpmn:extensionElements>
+      <yaoqiang:description/>
+      <yaoqiang:pageFormat height="841.8897637795276" imageableHeight="831.8897637795276" imageableWidth="588.1102362204724" imageableX="5.0" imageableY="5.0" orientation="0" width="598.1102362204724"/>
+      <yaoqiang:page background="#FFFFFF" horizontalCount="1" verticalCount="1"/>
+    </bpmn:extensionElements>
+    <bpmn:startEvent id="StartEvent_1" isInterrupting="true" parallelMultiple="false">
+      <bpmn:outgoing>SequenceFlow_1542sb5</bpmn:outgoing>
+      <bpmn:outputSet/>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_087vxow" sourceRef="Task_1hao42p" targetRef="EndEvent_05wrfg0"/>
+    <bpmn:serviceTask camunda:class="pl.lodz.p.miasi.delegate.TestDelegate" completionQuantity="1" id="Task_1hao42p" implementation="##WebService" isForCompensation="false" startQuantity="1">
+      <bpmn:incoming>SequenceFlow_1542sb5</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_087vxow</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1542sb5" sourceRef="StartEvent_1" targetRef="Task_1hao42p"/>
+    <bpmn:endEvent id="EndEvent_05wrfg0">
+      <bpmn:incoming>SequenceFlow_087vxow</bpmn:incoming>
+      <bpmn:inputSet/>
+      <bpmn:messageEventDefinition camunda:class="pl.lodz.p.miasi.delegate.Test2Delegate" id="EndEvent_05wrfg0_ED_1"/>
+    </bpmn:endEvent>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Yaoqiang_Diagram-abc" name="Untitled Diagram" resolution="96.0">
+    <bpmndi:BPMNPlane bpmnElement="abc">
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="Yaoqiang-StartEvent_1">
+        <dc:Bounds height="32.0" width="32.0" x="179.0" y="103.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8" width="6.0" x="192.0" y="143.6"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="Task_1hao42p" id="Yaoqiang-Task_1hao42p">
+        <dc:Bounds height="80.0" width="100.0" x="277.0" y="81.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8" width="6.0" x="324.0" y="113.6"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="EndEvent_05wrfg0" id="Yaoqiang-EndEvent_05wrfg0">
+        <dc:Bounds height="32.0" width="32.0" x="427.0" y="103.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8" width="6.0" x="440.0" y="143.6"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_1542sb5" id="Yaoqiang-SequenceFlow_1542sb5">
+        <di:waypoint x="211.0" y="119.0"/>
+        <di:waypoint x="277.0" y="121.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8" width="6.0" x="241.0" y="110.6"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="SequenceFlow_087vxow" id="Yaoqiang-SequenceFlow_087vxow">
+        <di:waypoint x="377.0" y="121.0"/>
+        <di:waypoint x="427.0" y="119.0"/>
+        <bpmndi:BPMNLabel>
+          <dc:Bounds height="18.8" width="6.0" x="399.0" y="110.6"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
